@@ -5,8 +5,8 @@ build:
   docker:
     web: Dockerfile
 release:
-  image: web
-  command:
-    - python manage.py collectstatic --noinput
+#   image: web
+#   command:
+#     - python manage.py collectstatic --noinput
 run:
   web: gunicorn blogapi_project.wsgi
