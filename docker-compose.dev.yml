@@ -4,5 +4,7 @@ services:
   web:
     build: .
     command: gunicorn blogapi_project.wsgi -b 0.0.0.0:8000
+    volumes:
+      - .:/code
     ports:
       - "8000:8000"
